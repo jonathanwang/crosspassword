@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<title>CrossPassword</title>
+	<link rel="stylesheet" href="/static/login_register.css" />
+</head>
+
+<body>
+
+<h1>CrossPassword</h1>
+
+<!-- Flashed messages -->
+<div class="flash" id="flash">
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				{{ message }}
+				<br />
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	<br />
+</div>
+
+<!-- Home page text -->
+<div class="home" id="home">
+	<strong>{{ g.username }}</strong>
+	<br />
+	<br />
+	Homepage - Signed In
+	<br />
+	<br />
+	<a href="../logout/">Logout</a>
+</div>
+
+</body>
+
+</html>

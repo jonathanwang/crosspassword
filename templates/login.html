@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<title>CrossPassword</title>
+	<link rel="stylesheet" href="/static/login_register.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="/static/login.js"></script>
+</head>
+
+<body>
+
+<h1>CrossPassword</h1>
+
+<!-- Flashed messages -->
+<div class="flash" id="flash">
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				{{ message }}
+				<br />
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+</div>
+
+<!-- Login form -->
+<div class="login" id="login">
+	<strong>Login</strong>
+	<br />
+
+
+	<div id="username_div">
+		Username: <input type="text" name="username_input" id="username_input" />
+		<br />
+		<button type="button" name="next" id="next">Next</button>
+	</div>
+
+
+	<div class="direction" id="direction" style="visibility:hidden">
+	</div>
+
+
+	<div class="crossword" id="crossword">
+		<table class="cross_table" id="cross_table"></table>
+	</div>
+
+
+	<form action="" method="post" id="trace_form" style="visibility:hidden">
+		Trace: <input type="password" name="trace_input" id="trace_input" />
+		<br />
+		<input type="hidden" name="username_hidden_input" id="username_hidden_input" value="will be set to username" />
+		<input type="hidden" name="crossword_object_input" id="crossword_object_input" value="will be set to crossword object" />
+		<input type="submit" value="Login" />
+	</form>
+
+
+	<br />
+	Are you a new user? <a href="../register/">Register here!</a>
+</div>
+
+
+</body>
+
+</html>

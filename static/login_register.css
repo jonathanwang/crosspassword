@@ -1,0 +1,35 @@
+.startLetter {
+	color: white;
+	font-weight: bold;
+	background-color: red;
+}
+
+.crossword {
+	letter-spacing: 0.3em;
+}
+
+.direction {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.highlightedCell {
+	background-color: #C0C0C0;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+table, th, td {
+	border: 2px solid black;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	text-align: center;
+}

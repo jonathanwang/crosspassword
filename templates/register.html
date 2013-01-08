@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<title>CrossPassword</title>
+	<link rel="stylesheet" href="login_register.css" />
+</head>
+
+<body>
+
+<h1>CrossPassword</h1>
+
+<!-- Flashed messages -->
+<div class="flash" id="flash">
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				{{ message }}
+				<br />
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+</div>
+
+<!-- Registration form -->
+<div class="register" id="register">
+	<strong>New User Registration</strong>
+	<form action="" method=post>
+		Username: <input type=text name=username />
+		<br />
+		Password: <input type=password name=password />
+		<br />
+		Confirm Password: <input type=password name=password_confirm />
+		<br />
+		<input type=submit value=Register>
+		
+		<br /><br/ >
+		Already registered? <a href="../login/">Login here!</a>
+	</form>
+</div>
+
+</body>
+
+</html>
