@@ -4,6 +4,9 @@ crosspassword
 Alternative password input method
 
 
+Created by: Jonathan Wang, Michael Plasmeier, Miguel Flores
+
+
 
 To see a running version of the code, go to:
 crosspassword.herokuapp.com
